@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import {usercontext} from "./context/Userpovider"
 import { useState } from 'react';
 import Footer from './components/features/Footer/Footer';
-import Login from './components/pages/Login/Login';
+import Login from './components/features/Login/Login';
 import Home from './components/pages/Home/Home';
 function App() {
 

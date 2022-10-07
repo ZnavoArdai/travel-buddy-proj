@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { usercontext } from "../../../context/Userpovider";
 import Signup from "../../features/signUp/Signup";
-import Login from "../Login/Login";
+import Login from "../../features/Login/Login";
 
 const Home = () => {
   const { user, setUser } = useContext(usercontext);
