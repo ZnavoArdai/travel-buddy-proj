@@ -7,17 +7,25 @@ import {usercontext} from "./context/Userpovider"
 import { useState } from 'react';
 import Footer from './components/features/Footer/Footer';
 import Login from './components/pages/Login/Login';
+import Home from './components/pages/Home/Home';
 function App() {
-  const [user,setUser]=useState("znavo")
+
+  const newName = localStorage.getItem('newName2');
+    const newEmail= localStorage.getItem('newEmail2');
+    const newPassword = localStorage.getItem('newPassword2');
+
   return (
     <div className="App">
-      <BrowserRouter>
-      <usercontext.Provider value={{user,setUser}}>
-      <Header/>
-      <RouterScreen/>
-      <Footer/>
+   <usercontext.Provider value={{newName,newEmail,newPassword}}>
+      {newName&&newEmail&&newPassword?(
+   <BrowserRouter>
+   <Header/>
+   <RouterScreen/>
+   <Footer/>
+   </BrowserRouter>
+      ):<Home/>}
       </usercontext.Provider>
-      </BrowserRouter>
+
     </div>
   );
 }

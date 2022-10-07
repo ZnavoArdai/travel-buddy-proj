@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from '../components/pages/Home/Home'
+import Community from '../components/pages/Community/Community'
 
 const RouterScreen = () => {
   return (
     <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/Community' element={<Community/>}/>
     </Routes>
   )
 }

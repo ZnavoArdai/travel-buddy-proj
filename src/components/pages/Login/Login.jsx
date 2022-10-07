@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import { usercontext } from "../../../context/Userpovider";
 
 function Login() {
+    const {user,setUser}=useContext(usercontext)
   const [show, setShow] = useState(false);
 
-  const handleClose = () => {
-    {
-      document.getElementById("display").innerText = name;
+  const getInfoFromLocalStorge=()=>{
+    if(name==localStorage.getItem('newName')&&email==localStorage.getItem('newEmail')&&password==localStorage.getItem('newPassword')){
+        localStorage.setItem('newName2', `${localStorage.getItem('newName')}`);
+        localStorage.setItem('newEmail2', `${localStorage.getItem('newEmail')}`);
+        localStorage.setItem('newPassword2', `${localStorage.getItem('newPassword')}`);
+        setShow(false);
+        window.location.reload()
     }
+
+  }
+  const handleClose = () => {
     setShow(false);
   };
   const handleShow = () => setShow(true);
@@ -31,12 +40,12 @@ function Login() {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        Login
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -73,8 +82,8 @@ function Login() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button variant="primary" onClick={getInfoFromLocalStorge}>
+            Login
           </Button>
         </Modal.Footer>
       </Modal>

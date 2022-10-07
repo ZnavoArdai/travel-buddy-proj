@@ -3,15 +3,19 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
-import Login from "../../pages/Login/Login";
 // import Image from 'react-bootstrap/Image'
 // import { Button } from 'react-bootstrap';
 
-function Navbarapp({ userlog }) {
+function Navbarapp() {
+
+  const logout=()=>{
+    localStorage.clear()
+    window.location.reload()
+  }
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand as={Link} to={"/"}>
+        <Navbar.Brand as={Link} to={"/Community"}>
           {" "}
           TravelBUDDY
         </Navbar.Brand>
@@ -21,20 +25,15 @@ function Navbarapp({ userlog }) {
             <Nav.Link href="#pricing"></Nav.Link>
           </Nav>
           <Nav>
-          {userlog ? (
-
-<Login/>
-) : (
-<Nav.Link href="/Login">Login</Nav.Link>
-)}
-            <Nav.Link href="/">Home</Nav.Link>
-       
+              <Nav.Link onClick={logout}>Logout</Nav.Link>
+          
+            <Nav.Link>Profile</Nav.Link>
             <NavDropdown title="More" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item  as={Link} to={"/Community"}>Community</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link
