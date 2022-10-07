@@ -21,3 +21,9 @@
   box-sizing: border-box;
 
 }
+.showCase{
+  min-height: 84.5vh
+}
+.Footercontainer{
+  min-height: 20vh
+}

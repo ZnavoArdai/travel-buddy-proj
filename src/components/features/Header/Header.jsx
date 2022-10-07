@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbarapp from '../../features/NavBar/Navbar'
+import Navbarapp from '../NavBar/Navbar'
 
 const Header = () => {
   return (
