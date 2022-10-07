@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import {usercontext} from "./context/Userpovider"
 import { useState } from 'react';
 import Footer from './components/features/Footer/Footer';
+import Login from './components/pages/Login/Login';
 function App() {
   const [user,setUser]=useState("znavo")
   return (

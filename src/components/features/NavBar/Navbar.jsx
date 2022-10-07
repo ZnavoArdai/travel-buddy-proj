@@ -3,7 +3,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
-import Image from 'react-bootstrap/Image'
+import Login from "../../pages/Login/Login";
+// import Image from 'react-bootstrap/Image'
 // import { Button } from 'react-bootstrap';
 
 function Navbarapp({ userlog }) {
@@ -22,10 +23,7 @@ function Navbarapp({ userlog }) {
           <Nav>
           {userlog ? (
 
-<Nav.Link href="/Login">
-  <Image src="https://www.w3schools.com/w3css/img_avatar3.png" width={30}/>
-  <p>{userlog}</p>
-</Nav.Link>
+<Login/>
 ) : (
 <Nav.Link href="/Login">Login</Nav.Link>
 )}
