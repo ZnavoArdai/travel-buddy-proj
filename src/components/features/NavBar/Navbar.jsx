@@ -1,27 +1,36 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
-// import Image from 'react-bootstrap/Image'
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
+import Image from 'react-bootstrap/Image'
 // import { Button } from 'react-bootstrap';
 
-
-function Navbarapp() {
+function Navbarapp({ userlog }) {
   return (
-    
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand as={Link} to={"/"} > TravelBUDDY</Navbar.Brand>
+        <Navbar.Brand as={Link} to={"/"}>
+          {" "}
+          TravelBUDDY
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#pricing"></Nav.Link>
           </Nav>
           <Nav>
-            
+          {userlog ? (
+
+<Nav.Link href="/Login">
+  <Image src="https://www.w3schools.com/w3css/img_avatar3.png" width={30}/>
+  <p>{userlog}</p>
+</Nav.Link>
+) : (
+<Nav.Link href="/Login">Login</Nav.Link>
+)}
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/Login">Login</Nav.Link>
+       
             <NavDropdown title="More" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -37,7 +46,6 @@ function Navbarapp() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    
   );
 }
 
