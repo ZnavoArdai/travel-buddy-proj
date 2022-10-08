@@ -3,37 +3,42 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
-// import Image from 'react-bootstrap/Image'
+import Image from "react-bootstrap/Image";
 // import { Button } from 'react-bootstrap';
 
-function Navbarapp() {
-
-  const logout=()=>{
-    localStorage.clear()
-    window.location.reload()
-  }
+function Navbarapp({ newName, newEmail, newLastName, NEWphoto }) {
+  const logout = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg"  variant="dark" bg="red" style={{backgroundColor:"#563D7C"}}>
       <Container>
-        <Navbar.Brand as={Link} to={"/Community"}>
+        <Navbar.Brand className="acc" as={Link} to={"/Community"}>
           {" "}
           TravelBUDDY
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#pricing"></Nav.Link>
+          <Nav className="me-auto justify-content-center ">
+            {NEWphoto?(<Image width={50} src={NEWphoto} />):(<Image width={50} src="https://www.w3schools.com/w3css/img_avatar3.png" />)
+
+}            <p className="text-light position-fixed ">{newName }</p>
+
           </Nav>
+
           <Nav>
-              <Nav.Link onClick={logout}>Logout</Nav.Link>
-          
+            <Nav.Link onClick={logout}>Logout</Nav.Link>
+
             <Nav.Link>Profile</Nav.Link>
             <NavDropdown title="More" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
-              <NavDropdown.Item  as={Link} to={"/Community"}>Community</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/"}>
+                Community
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link

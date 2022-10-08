@@ -9,10 +9,13 @@ function Login() {
   const [show, setShow] = useState(false);
 
   const getInfoFromLocalStorge=()=>{
-    if(name==localStorage.getItem('newName')&&email==localStorage.getItem('newEmail')&&password==localStorage.getItem('newPassword')){
-        localStorage.setItem('newName2', `${localStorage.getItem('newName')}`);
-        localStorage.setItem('newEmail2', `${localStorage.getItem('newEmail')}`);
-        localStorage.setItem('newPassword2', `${localStorage.getItem('newPassword')}`);
+    if(name==localStorage.getItem('nameSignup')&&email==localStorage.getItem('emailSignup')&&password==localStorage.getItem('passwordSignup')){
+        localStorage.setItem('NEWnameSignup', `${localStorage.getItem('nameSignup')}`);
+        localStorage.setItem('NEWemailSignup', `${localStorage.getItem('emailSignup')}`);
+        localStorage.setItem('NEWpasswordSignup', `${localStorage.getItem('passwordSignup')}`);
+        localStorage.setItem('NEWsecPasswordSignup', `${localStorage.getItem('secPasswordSignup')}`);
+        localStorage.setItem('NEWlastNameSignup', `${localStorage.getItem('lastNameSignup')}`);
+        localStorage.setItem('NEWphotoSignup', `${localStorage.getItem('photoSignup')}`);
         setShow(false);
         window.location.reload()
     }

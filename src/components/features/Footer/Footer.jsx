@@ -12,7 +12,7 @@ import { FaFacebook } from "react-icons/fa";
 function Footer() {
   return (
 
-    <Navbar className='Footercontainer' collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar className='Footercontainer' collapseOnSelect expand="lg"  variant="dark" style={{backgroundColor:"#563D7C"}}>
       <Container>
       
             
