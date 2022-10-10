@@ -1,4 +1,4 @@
-import"./Community.css"
+import"./products.css"
 import React, { useContext } from 'react'
 import { Product } from '../../../service/productItems'
 import ProductsCard from '../Products/ProductsCard'

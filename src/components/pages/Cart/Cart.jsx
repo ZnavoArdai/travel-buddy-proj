@@ -1,3 +1,4 @@
+import"./Cart.css"
 import React from 'react'
 import { cartContext } from '../../../context/CartContext'
 import { useContext } from 'react'
@@ -5,12 +6,14 @@ import CartItemCard from '../cartItemCard/CartItemCard'
 
 const Cart = () => {
     
+
+
+  
     const {cart}=useContext(cartContext)
   return (
-    <div>
-<h1>cart items</h1>
+    <div className='cartitems showCase justify-content-center d-flex flex-column'>
         {cart.map((items)=>
-        <CartItemCard items={items}/>
+        <CartItemCard items={items} cart={cart}/>
         )}
     </div>
   )

@@ -1,22 +1,20 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+
+import"./CartItemsCard.css"
 
 function CartItemCard({items}) {
 
+
   return (
-    <Card className='container '>
-      <Card.Img variant="top" src={items.image} style={{height:"17rem"}} />
-      <Card.Body>
-        <Card.Title>{items.name}</Card.Title>
-        <Card.Text>
-       {items.describe}
-        </Card.Text>
-        <Card.Text>
-       {items.price}$
-        </Card.Text>
-        <Button variant="primary">Remove item</Button>
-      </Card.Body>
-    </Card>
+   <div className='CartItemCard d-flex justify-content-evenly text-center container'>
+    <img src={items.image} alt="" />
+    <p className=''>{items.name}</p>
+    <p>{items.price}</p>
+    <p>0</p>
+    <button>remove item</button>
+    <button>+</button>
+    <button>-</button>
+
+   </div>
   );
 }
 
