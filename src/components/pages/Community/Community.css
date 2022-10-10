@@ -1,0 +1,17 @@
+.productsItemCards{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap: 0.3rem;
+    align-items: center;
+    justify-items: center;
+}
+
+
+@media screen and (max-width:750px) {
+    
+    .productsItemCards{
+        grid-template-columns: repeat(2,1fr);
+        font-size: small
+      
+    }
+}
