@@ -4,9 +4,9 @@ import Navbarapp from '../NavBar/Navbar'
 
 
 const Header = () => {
-  const {newName, newEmail, newLastName,NEWphoto}=useContext(usercontext)
+  const {newUser}=useContext(usercontext)
   return (
-    <Navbarapp newName={newName} newEmail={newEmail} newLastName={newLastName} NEWphoto={NEWphoto}/>
+    <Navbarapp newUser={newUser}/>
   )
 }
 

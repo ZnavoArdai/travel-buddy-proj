@@ -9,16 +9,20 @@ import Footer from "./components/features/Footer/Footer";
 import Login from "./components/features/Login/Login";
 import Home from "./components/pages/Home/Home";
 function App() {
-  const newName = localStorage.getItem("NEWnameSignup");
-  const newEmail = localStorage.getItem("NEWemailSignup");
-  const NEWphoto = localStorage.getItem("NEWphotoSignup");
-  const newLastName = localStorage.getItem("NEWlastNameSignup");
+
+  const newUser={
+    newName: localStorage.getItem("NEWnameSignup"),
+    newEmail:localStorage.getItem("NEWemailSignup"),
+    NEWphoto:localStorage.getItem("NEWphotoSignup"),
+    newLastName:localStorage.getItem("NEWlastNameSignup")
+  }
 
 
+console.log(newUser.newEmail)
   return (
     <div className="App">
-      <usercontext.Provider value={{ newName, newEmail, newLastName,NEWphoto }}>
-        {newName && newEmail && newLastName ? (
+      <usercontext.Provider value={{newUser}}>
+        {newUser.newName &&newUser.newEmail && newUser.newLastName ? (
           <BrowserRouter>
             <Header />
             <RouterScreen />

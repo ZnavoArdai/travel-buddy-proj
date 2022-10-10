@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 // import { Button } from 'react-bootstrap';
 
-function Navbarapp({ newName, newEmail, newLastName, NEWphoto }) {
+function Navbarapp({newUser }) {
   const logout = () => {
     localStorage.clear();
     window.location.reload();
@@ -21,9 +21,9 @@ function Navbarapp({ newName, newEmail, newLastName, NEWphoto }) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto justify-content-center ">
-            {NEWphoto?(<Image width={50} src={NEWphoto} />):(<Image width={50} src="https://www.w3schools.com/w3css/img_avatar3.png" />)
+            {newUser.NEWphoto?(<Image width={50} src={newUser.NEWphoto} />):(<Image width={50} src="https://www.w3schools.com/w3css/img_avatar3.png" />)
 
-}            <p className="text-light position-fixed ">{newName }</p>
+}            <p className="text-light position-fixed ">{newUser.newName }</p>
 
           </Nav>
 
