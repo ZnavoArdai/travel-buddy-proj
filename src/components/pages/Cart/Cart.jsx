@@ -22,12 +22,18 @@ const Cart = () => {
   
     const {cart,setCart}=useContext(cartContext)
   return (
-    <div className='cartitems showCase justify-content-center d-flex flex-column'>
-        {cart.map((items)=>
-        <CartItemCard items={items} cart={cart} setCart={setCart} changePrice={changePrice} setPrice={setPrice}/>
-        )}
+    <div className="justify-content-center ">
 
-        <div>{price}</div>
+    
+    <div className='cartitems showCase d-flex flex-column mt-5 '>
+    {!price?(<h1 className="text-center">cart is empty</h1>):(cart.map((items)=>
+        <CartItemCard items={items} cart={cart} setCart={setCart} changePrice={changePrice} setPrice={setPrice}/>
+        
+        ))}
+               <div className=" totalprice text-center"><h3>Totale:</h3><span>{price}$</span></div>
+
+
+    </div>
     </div>
   )
 }

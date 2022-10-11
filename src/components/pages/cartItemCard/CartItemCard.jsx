@@ -1,4 +1,7 @@
 import "./CartItemsCard.css";
+import { Button } from "react-bootstrap";
+import { FaTrashAlt } from 'react-icons/fa';
+
 
 function CartItemCard({ items, cart, setCart, changePrice }) {
   const removeItem = (id) => {
@@ -13,20 +16,26 @@ function CartItemCard({ items, cart, setCart, changePrice }) {
     const tempCart=cart;
 
     parseInt(tempCart[itemIndex].amount+=number);
+    
+    if(tempCart[itemIndex].amount==0)tempCart[itemIndex].amount=1
     setCart([...tempCart])
     
       }
 
   return (
-    <div>
-      <div className="CartItemCard d-flex justify-content-evenly text-center container">
+    <div className="cartCardContainer  container">
+      <div className="CartItemCard d-flex justify-content-evenly text-center  ">
         <img src={items.image} alt="" />
         <p className="">{items.name}</p>
         <p>{items.price}</p>
         <p>{items.amount}</p>
-        <button onClick={() => removeItem(items.id)}>remove item</button>
-        <button onClick={()=>changeAmount(items,1)}>+</button>
-        <button onClick={()=>changeAmount(items,-1)}>-</button>
+        <div>
+        <Button style={{background:"#FFE484",borderBlockColor:"#563D7C"}} onClick={()=>changeAmount(items,1)}>+</Button>
+        <Button style={{background:"#FFE484",borderBlockColor:"#563D7C"}} onClick={()=>changeAmount(items,-1)}>-</Button>
+
+        </div>
+
+        <Button style={{background:"#FFE484",borderBlockColor:"#563D7C"}}  onClick={() => removeItem(items.id)}><FaTrashAlt color="red"/></Button>
       </div>
     </div>
   );

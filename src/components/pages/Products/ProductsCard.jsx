@@ -11,7 +11,7 @@ setCart([...cart,item])
 
   }
   return (
-    <Card className='container '>
+    <Card className='container  '>
       <Card.Img variant="top" src={items.image} style={{height:"17rem"}} />
       <Card.Body>
         <Card.Title>{items.name}</Card.Title>

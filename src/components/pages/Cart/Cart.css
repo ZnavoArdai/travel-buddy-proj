@@ -1,3 +1,15 @@
 .cartitems{
     background-color: "#322348"
 }
+.totalprice>h3{
+    color: #563D7C;
+    display: inline-block;
+}
+.totalprice>span{
+    color:#FFE484;
+    font-weight: bold;
+    font-size: 26px;
+}
+.cartitems>h1{
+    color: #563D7C;
+}

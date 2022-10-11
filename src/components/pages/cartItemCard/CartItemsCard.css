@@ -4,17 +4,16 @@
     align-items: center;
     gap:2rem;
     border-radius: 45%;
-    background-color:"#563D7C";
-    
+}
+.cartCardContainer{
+    background-color:#ceb4f52d;
+    border-bottom: 4px solid #563d7c9b;
+    contain: content
 }
 .CartItemCard>img{
 width: 4rem;
 }
 .CartItemCard>p{
     max-width:5rem;
-    contain: content;
-}
-.CartItemCard>button{
-    max-width:4rem;
     contain: content;
 }
