@@ -11,7 +11,7 @@ setCart([...cart,item])
 
   }
   return (
-    <Card className='container  '>
+    <Card className='container '>
       <Card.Img variant="top" src={items.image} style={{height:"17rem"}} />
       <Card.Body>
         <Card.Title>{items.name}</Card.Title>
@@ -21,7 +21,7 @@ setCart([...cart,item])
         <Card.Text>
        {items.price}$
         </Card.Text>
-        <Button variant="primary" onClick={()=>addToCart(items)}>Add Item</Button>
+        <Button  style={{background:"#FFE484",borderBlockColor:"#563D7C",color:"black"}} onClick={()=>addToCart(items)}>Add Item</Button>
       </Card.Body>
     </Card>
   );

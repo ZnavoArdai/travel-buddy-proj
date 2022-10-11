@@ -47,11 +47,9 @@ function Navbarapp({ newUser,cart }) {
 
             <Nav.Link as={Link} to={"/products"}>Products</Nav.Link>
             <NavDropdown title="More" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Profile </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to={"/products"}>
-                Producs
-              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/profile"}>Profile</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/about"}>About</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/contact"}>contact</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link

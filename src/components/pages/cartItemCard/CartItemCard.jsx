@@ -30,8 +30,8 @@ function CartItemCard({ items, cart, setCart, changePrice }) {
         <p>{items.price}</p>
         <p>{items.amount}</p>
         <div>
-        <Button style={{background:"#FFE484",borderBlockColor:"#563D7C"}} onClick={()=>changeAmount(items,1)}>+</Button>
-        <Button style={{background:"#FFE484",borderBlockColor:"#563D7C"}} onClick={()=>changeAmount(items,-1)}>-</Button>
+        <Button style={{background:"#FFE484",borderBlockColor:"#563D7C" ,color:"black"}} onClick={()=>changeAmount(items,1)}>+</Button>
+        <Button style={{background:"#FFE484",borderBlockColor:"#563D7C" ,color:"black"}} onClick={()=>changeAmount(items,-1)}>-</Button>
 
         </div>
 

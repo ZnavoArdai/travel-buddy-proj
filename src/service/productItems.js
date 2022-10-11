@@ -3,7 +3,7 @@ export const Product={
 items:[
     {
         id:'1',
-        name:"Travel Pillow",
+        name:"Travel Backpack",
         image:"images/products/1.jpg",
         describe:"JefDiee Inflatable Travel Pillow, Airplane Neck Pillow Comfortably Supports Head and Chin for Airplanes, Trains, Cars and",
         price:"13",
@@ -22,7 +22,7 @@ items:[
 
     }  ,  {
         id:'3',
-        name:"Travel Backpack",
+        name:"Travel Pillow",
         image:"images/products/3.jpg",
         describe:"Travel Backpack, 40L Flight Approved Carry on Hand Luggage, MATEIN Water Resistant Anti-Theft Business Large",
         price:"18",
@@ -33,7 +33,7 @@ items:[
       {
         
         id:'4',
-        name:"Travel Laptop",
+        name:"Travel Bottle",
         image:"images/products/4.jpg",
         describe:"Travel Laptop Backpack,TSA Large Travel Backpack for Women Men, 17 Inch Business Flight Approved Carry On",
         price:"63",
@@ -43,7 +43,7 @@ items:[
     }   
     , {
         id:'5',
-        name:"Inflatable Foot Rest",
+        name:"Gorilla Grip",
         image:"images/products/5.jpg",
         describe:"Inflatable Foot Rest for Air Travel, Airplane Footrest Adjustable Height Travel Foot Pillow Flyaway Kids Bed ,Portable Foot",
         price:"34",
@@ -53,7 +53,7 @@ items:[
     }  ,
       {
         id:'6',
-        name:"Gorilla Grip",
+        name:"Travel Backpack",
         image:"images/products/6.jpg",
         describe:"Gorilla Grip Memory Foam Travel Neck Pillow, Cooling Mesh, Soft Velvet, Blinkable Contoured Eye Mask, Earplugs,",
         price:"12",
@@ -73,7 +73,7 @@ items:[
     }  ,
       {
         id:'8',
-        name:"Airplane Footrest",
+        name:"Travel Blanket",
         image:"images/products/8.jpg",
         describe:"2 Pack Airplane Footrest with Premium Memory Foam，Airplane Travel Accessories，Portable Travel Foot",
         price:"36",
@@ -93,7 +93,7 @@ items:[
     }  ,
       {
         id:'10',
-        name:"Travel Blanket",
+        name:"Airplane Footrest",
         image:"images/products/10.jpg",
         describe:"PAVILIA Travel Blanket and Pillow, Dual Zippers, Clip On Strap, Warm Soft Fleece 2-in0Combo Blanket Airplane, Camping,",
         price:"30",
