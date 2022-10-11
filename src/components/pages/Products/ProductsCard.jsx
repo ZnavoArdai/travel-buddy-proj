@@ -5,7 +5,9 @@ import Cart from '../Cart/Cart';
 function ProductsCard({items,cart,setCart}) {
 
   const addToCart=(item)=>{
-setCart([...cart,{...item}])
+    // if exist in the cart return only the item//
+    if(cart.indexOf(item)!== -1)return;
+setCart([...cart,item])
 
   }
   return (
