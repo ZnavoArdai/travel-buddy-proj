@@ -15,7 +15,7 @@ items:[
         name:"Airplane Footrest ",
 
         image:"images/products/2.jpg",
-        describe:"Airplane Footrest - Portable Travel Accessories to Relax Your Feet, Under Desk Footrest Adjustable Height Foot Hammock",
+        describe:"Airplane Footrest - Portable Travel Accessories to Relax Your Feet, Under Desk Footrest Adjustable Height",
         price:"40",
         amount:1
 
@@ -24,7 +24,7 @@ items:[
         id:'3',
         name:"Travel Pillow",
         image:"images/products/3.jpg",
-        describe:"Travel Backpack, 40L Flight Approved Carry on Hand Luggage, MATEIN Water Resistant Anti-Theft Business Large",
+        describe:"Travel Backpack, 40L Flight Approved Carry on Hand Luggage, MATEIN Water Resistant Anti-Theft Business ",
         price:"18",
         amount:1
 

@@ -19,7 +19,6 @@ function Login() {
         setShow(false);
         window.location.reload()
     }
-
   }
   const handleClose = () => {
     setShow(false);
