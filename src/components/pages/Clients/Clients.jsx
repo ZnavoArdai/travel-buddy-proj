@@ -7,18 +7,29 @@ const Clients = () => {
   const [apiUser,setApiUser]=useState([])
 
   useEffect(()=>{
+  setTimeout(()=>{
     getUser().then((res)=>setApiUser(res))
+
+  },3000)
   },[])
   console.log(apiUser)
   return (
-    <div className='onlineUsers mt-5 '>
-{
-  apiUser.map((item)=>
+    <div>
+    <div className='ClientsItemCards mt-5 container-fluid d-flex justify-content-center mb-5'>
+<div className="row justify-content-center" id="dis"> 
 
-  <OnlineUsersCard item={item}/>
-  )
-}
+{!apiUser.length?(
+  <img src="images/loding/loadinggif.gif" alt="" />
+):(
 
+  apiUser.map((item,index)=>
+
+  <OnlineUsersCard item={item} index={index}/>)
+)}
+
+</div>
+    </div>
+   
     </div>
   )
 }

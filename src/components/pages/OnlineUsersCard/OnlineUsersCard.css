@@ -1,0 +1,8 @@
+.OnlineUsersCard{
+    width:20rem;
+}
+.online{
+    background-color: green;
+    width:0.5rem;
+    border-radius: 50%;
+}

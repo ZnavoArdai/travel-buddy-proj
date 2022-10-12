@@ -12,7 +12,7 @@ setCart([...cart,item])
 
   }
   return (
-    <div className='ProductCARD col-md-4 '>
+    <div className='ProductCARD col-md-4 mt-2'>
     <Card className='container '>
       <Card.Img variant="top" src={items.image} style={{height:"17rem"}} />
       <Card.Body>

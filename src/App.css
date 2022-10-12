@@ -28,3 +28,7 @@
   min-height: 20vh
 }
 
+body{
+  background: radial-gradient(#e5e5e5,#ffff,#e5e5e5)
+}
+
