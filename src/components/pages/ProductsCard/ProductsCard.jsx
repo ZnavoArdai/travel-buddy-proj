@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/Button';
+import "./ProductsCard.css"
 import Card from 'react-bootstrap/Card';
 import Cart from '../Cart/Cart';
 
@@ -11,6 +12,7 @@ setCart([...cart,item])
 
   }
   return (
+    <div className='ProductCARD col-md-4 '>
     <Card className='container '>
       <Card.Img variant="top" src={items.image} style={{height:"17rem"}} />
       <Card.Body>
@@ -24,6 +26,7 @@ setCart([...cart,item])
         <Button  style={{background:"#FFE484",borderBlockColor:"#563D7C",color:"black"}} onClick={()=>addToCart(items)}>Add Item</Button>
       </Card.Body>
     </Card>
+    </div>
   );
 }
 
