@@ -32,9 +32,7 @@ function CartItemCard({ items, cart, setCart, changePrice }) {
         <div>
         <Button style={{background:"#FFE484",borderBlockColor:"#563D7C" ,color:"black"}} onClick={()=>changeAmount(items,1)}>+</Button>
         <Button style={{background:"#FFE484",borderBlockColor:"#563D7C" ,color:"black"}} onClick={()=>changeAmount(items,-1)}>-</Button>
-
         </div>
-
         <Button style={{background:"#FFE484",borderBlockColor:"#563D7C"}}  onClick={() => removeItem(items.id)}><FaTrashAlt color="red"/></Button>
       </div>
     </div>
@@ -42,3 +40,6 @@ function CartItemCard({ items, cart, setCart, changePrice }) {
 }
 
 export default CartItemCard;
+
+
+

@@ -5,7 +5,8 @@ import { useContext ,useState,useEffect} from 'react'
 import CartItemCard from '../cartItemCard/CartItemCard'
 
 const Cart = () => {
-    
+  const {cart,setCart}=useContext(cartContext)
+
   const [price,setPrice]=useState(
     ()=>{return 0}
   )
@@ -20,7 +21,6 @@ const Cart = () => {
     changePrice()
   })
   
-    const {cart,setCart}=useContext(cartContext)
   return (
     <div className="justify-content-center ">
 

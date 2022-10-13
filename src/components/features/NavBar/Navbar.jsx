@@ -38,7 +38,7 @@ function Navbarapp({ newUser,cart }) {
                 src="https://www.w3schools.com/w3css/img_avatar3.png"
               />
             )}{" "}
-            <p className="text-light position-fixed ">{newUser.newName}</p>
+            <p className="text-light ">{newUser.newName}</p>
           </Nav>
 
           <Nav>
