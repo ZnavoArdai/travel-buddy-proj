@@ -9,7 +9,6 @@ function ProductsCard({items,cart,setCart}) {
     // if exist in the cart return only the item//
     if(cart.indexOf(item)!== -1)return;
 setCart([...cart,item])
-
   }
   return (
     <div className='ProductCARD col-md-4 mt-2'>

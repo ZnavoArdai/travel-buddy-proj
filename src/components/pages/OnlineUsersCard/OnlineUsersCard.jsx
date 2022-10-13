@@ -6,7 +6,7 @@ import { FaCircle } from 'react-icons/fa';
 function OnlineUsersCard({item,index}) {
 
   return (
-    <div className='OnlineUsersCard col-md-4 mt-3 '>
+    <div className='OnlineUsersCard col-sm-4 mt-3 '>
 
     <Card className='container  '>
       <Card.Img  variant="top"   style={{height:"17rem"}} src={`images/usersimg/user${index}.jpg`} />

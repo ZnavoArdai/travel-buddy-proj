@@ -11,6 +11,7 @@ const Products = () => {
     setSearch(e.target.value);
   };
 
+
   return (
     <div className="showCase">
       <div className="  d-flex justify-content-center mt-5">

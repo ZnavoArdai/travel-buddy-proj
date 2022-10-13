@@ -32,7 +32,6 @@ const Cart = () => {
         ))}
                <div className=" totalprice text-center"><h3>Totale:</h3><span>{price}$</span></div>
 
-
     </div>
     </div>
   )
