@@ -11,7 +11,7 @@ const Profile = () => {
     <div className='showCase'>
             <h1>profile</h1>
 
-    <div className=' d-flex justify-content-center mt-5'>
+    <div className=' d-flex justify-content-center m-5 text-center '>
 
       <div>
       <Card className='container  '>
@@ -28,16 +28,14 @@ const Profile = () => {
         </Card.Text>
         <Card.Text>
         </Card.Text>
-        <Button  style={{background:"#FFE484",borderBlockColor:"#563D7C",color:"black"}}>send massage</Button>
       </Card.Body>
+      <EditProfile/>
+
     </Card>
       </div>
  
     </div>
-    <div className='d-flex justify-content-center '>
-<EditProfile/>
-
-      </div>
+   
     </div>
   )
 }

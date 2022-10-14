@@ -1,17 +1,15 @@
 import"./Clients.css"
 import React, { useEffect, useState } from 'react'
-import { getUser } from '../../../service/OnlineUsersServise';
 import OnlineUsersCard from '../OnlineUsersCard/OnlineUsersCard';
+import {ClientsData} from "../../../service/ClientsData"
 const Clients = () => {
 
   const [apiUser,setApiUser]=useState([])
   const [searchClients,setSearchClients]=useState("")
 
-
   useEffect(()=>{
   setTimeout(()=>{
-    getUser().then((res)=>setApiUser(res))
-
+    setApiUser(ClientsData.items)
   },3000)
   },[])
 console.log(apiUser)
@@ -48,9 +46,9 @@ console.log(apiUser)
   <img src="images/loding/loadinggif.gif" alt="" />
 ):(
 
-  apiUser.filter((items)=>items.profile.name.toLowerCase().includes(searchClients.toLowerCase())).map((item,index)=>
+  apiUser.filter((items)=>items.name.toLowerCase().includes(searchClients.toLowerCase())).map((item)=>
 
-  <OnlineUsersCard item={item} index={index}/>)
+  <OnlineUsersCard item={item} />)
 )}
 
 </div>

@@ -3,20 +3,20 @@ import Card from 'react-bootstrap/Card';
 import "./OnlineUsersCard.css"
 import { FaCircle } from 'react-icons/fa';
 
+
 function OnlineUsersCard({item,index}) {
 
   return (
     <div className='OnlineUsersCard col-sm-4 mt-3 '>
 
     <Card className='container  '>
-      <Card.Img  variant="top"   style={{height:"17rem"}} src={`images/usersimg/user${index}.jpg`} />
+      <Card.Img  variant="top"   style={{height:"17rem"}} src={item.image} />
       <Card.Body>
-        <Card.Title>{item.profile.name} <FaCircle className='text-success'/></Card.Title>
+        <Card.Title>{item.name} <FaCircle className='text-success'/></Card.Title>
         <Card.Text>
-       {item.profile.dob}
+       {item.age}
         </Card.Text>
         <Card.Text>
-       {item.about}
         </Card.Text>
         <Button  style={{background:"#FFE484",borderBlockColor:"#563D7C",color:"black"}}>send massage</Button>
       </Card.Body>

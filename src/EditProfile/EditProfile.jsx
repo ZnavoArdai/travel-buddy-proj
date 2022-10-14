@@ -1,62 +1,81 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Form from "react-bootstrap/Form";
+import { Button } from "react-bootstrap";
+
 
 const EditProfile = () => {
-  return (
-    <div>
 
-<Form >
-            <Form.Group className="mb-3" controlId="inputnameSignup">
+const [changeProfile,setChangeProfile]=useState({fname:"",lname:"",photo:"",email:"",password:""})
+
+
+const onsubmit=()=>{
+  localStorage.setItem('NEWnameSignup', changeProfile.fname);
+  localStorage.setItem('NEWemailSignup', changeProfile.email);
+  localStorage.setItem('NEWpasswordSignup', changeProfile.password);
+  localStorage.setItem('NEWlastNameSignup', changeProfile.lname);
+  localStorage.setItem('NEWphotoSignup', changeProfile.photo);
+}
+const handeProfileINputs=(e)=>{
+  setChangeProfile({...changeProfile,[e.target.name]:e.target.value})
+}
+  return (
+    <div className='profileform text-center '>
+<Form>
+            <Form.Group className="mb-3" controlId="newNAME">
               <Form.Label>Name</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="enter name"
                 autoFocus
                 required
-                // onChange={(e) => handleNameSignup(e)}
+                name='fname'
+                onChange={(e) => handeProfileINputs(e)}
               />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="inputLastnameSignup">
+            <Form.Group className="mb-3" controlId="NEWLANEM">
               <Form.Label>Last Name</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="enter last name"
                 autoFocus
                 required
-                // onChange={(e) => handleLastNameSignup(e)}
-              />
+                name='lname'
+                onChange={(e) => handeProfileINputs(e)}              />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="inputPhotoSignup">
-              <Form.Label>Last Name</Form.Label>
+            <Form.Group className="mb-3" controlId="newPhoto">
+              <Form.Label>Photo</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="put Photo"
                 autoFocus
-                // onChange={(e) => handlePhotoSignup(e)}
-              />
+                name='photo'
+                onChange={(e) => handeProfileINputs(e)}              />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="inputemailSignup">
+            <Form.Group className="mb-3" controlId="newEmail">
               <Form.Label>Email Address</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="enter email"
                 autoFocus
                 required
-                // onChange={(e) => handleEmailSignup(e)}
-              />
+                name='email'
+                onChange={(e) => handeProfileINputs(e)}              />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="inputpasswordSignup">
+            <Form.Group className="mb-3" controlId="newPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type="Password"
                 placeholder="enter Password"
                 autoFocus
                 required
-                // onChange={(e) => handlePasswordSignup(e)}
-              />
+                name='password'
+                onChange={(e) => handeProfileINputs(e)}              />
             </Form.Group>
+
             
           </Form>
+          <Button style={{background:"#FFE484",borderBlockColor:"#563D7C"}} onClick={onsubmit} >Submit</Button>
+
     </div>
   )
 }
