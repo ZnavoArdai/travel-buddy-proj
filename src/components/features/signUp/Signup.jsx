@@ -48,7 +48,7 @@ function Signup() {
   const handleSecPasswordSignup = (e) => {
     setSecPasswordSignup(e.target.value);
   };
-  
+
 
   return (
     <>
