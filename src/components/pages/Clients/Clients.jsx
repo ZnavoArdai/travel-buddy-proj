@@ -2,6 +2,7 @@ import"./Clients.css"
 import React, { useEffect, useState } from 'react'
 import OnlineUsersCard from '../OnlineUsersCard/OnlineUsersCard';
 import {ClientsData} from "../../../service/ClientsData"
+import AddItem from "../addItem/AddItem";
 const Clients = () => {
 
   const [apiUser,setApiUser]=useState([])
@@ -16,6 +17,13 @@ console.log(apiUser)
   const serchInputClientes=(e)=>{
     setSearchClients(e.target.value)
   }
+
+  const removeItemFromClients=(id)=>{
+
+    const afterRemov=apiUser.filter((item)=>item.id!=id)
+
+    setApiUser(afterRemov)
+   }
   return (
     <div className="showCase">
            <div className="  d-flex justify-content-center mt-5">
@@ -48,7 +56,7 @@ console.log(apiUser)
 
   apiUser.filter((items)=>items.name.toLowerCase().includes(searchClients.toLowerCase())).map((item)=>
 
-  <OnlineUsersCard item={item} />)
+  <OnlineUsersCard item={item} removeItemFromClients={removeItemFromClients} />)
 )}
 
 </div>
