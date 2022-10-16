@@ -99,7 +99,7 @@ if(Object.keys(formEror).length==0&&isSubmit){
 
   return (
     <>
-      <Button style={{width:120}} variant="primary" onClick={handleShowSignup}>
+      <Button style={{width:120,backgroundColor: "#563D7C" }} variant="primary" onClick={handleShowSignup}>
         sign up
       </Button>
 

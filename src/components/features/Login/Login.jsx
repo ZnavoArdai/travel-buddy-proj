@@ -41,7 +41,7 @@ function Login() {
 
   return (
     <>
-      <Button style={{width:120}} variant="primary" onClick={handleShow}>
+      <Button style={{width:120, backgroundColor: "#563D7C"}} variant="primary" onClick={handleShow}>
         Login
       </Button>
 
