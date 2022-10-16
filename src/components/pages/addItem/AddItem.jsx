@@ -10,14 +10,21 @@ function AddItem({productS,setProductS}) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [addForm,setAddForm]=useState({id: JSON.stringify(productS.items.length+1),name:"znavooo ",image:"ASd",describe:"sadasd",price:20,amount:1})
+  const [addForm,setAddForm]=useState({id: JSON.stringify(productS.items.length+1),name:"",image:"",describe:"",price:20,amount:1})
 
   const addnewProduct=()=>{
 const newArrayOfPRO={...productS,...productS.items.push(addForm)}
 
-    setProductS(newArrayOfPRO)
     console.log(newArrayOfPRO);
-    setShow(false)
+
+    if(addForm.name&&addForm.image&&addForm.describe&&addForm.price){
+      setShow(false)
+      setProductS(newArrayOfPRO)
+
+    }
+    else{
+{document.getElementById("addEror").innerText="Complete all the fields"}
+    }
     
   }
 const handelAddForm=(e)=>{
@@ -38,6 +45,7 @@ const handelAddForm=(e)=>{
           <Form>
         
             <Form.Group className="mb-3" >
+              <div className='text-danger' id="addEror"></div>
               <Form.Label>name</Form.Label>
               <Form.Control
                 type="text"
