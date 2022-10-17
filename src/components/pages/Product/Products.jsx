@@ -13,6 +13,15 @@ const Products = () => {
     setSearch(e.target.value);
   };
 
+
+  const category=(value)=>{
+const items=productS.items.filter((item)=>item.category===value);
+setProductS({...productS,items})
+  }
+
+  const allproducts=()=>{
+    setProductS(Product)
+      }
  
 
   
@@ -20,6 +29,26 @@ const Products = () => {
 
   return (
     <div className="showCase mt-5">
+<div className="d-flex justify-content-center container ">
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onClick={()=>category("Travel")}/>
+  <label class="form-check-label" for="flexRadioDefault1">
+  Travel products
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={()=>category("Airplane")}/>
+  <label class="form-check-label" for="flexRadioDefault2">
+  AirPlan products   </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={allproducts}/>
+  <label class="form-check-label" for="flexRadioDefault2">
+  All products   </label>
+</div>
+</div>
+
+
      <div className="float-end sticky-top">
      <AddItem productS={productS}  setProductS={setProductS}/>
 
