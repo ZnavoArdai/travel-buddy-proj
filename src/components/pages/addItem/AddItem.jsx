@@ -13,11 +13,11 @@ function AddItem({productS,setProductS}) {
   const [addForm,setAddForm]=useState({id: JSON.stringify(productS.items.length+1),name:"",image:"",describe:"",price:20,amount:1})
 
   const addnewProduct=()=>{
-const newArrayOfPRO={...productS,...productS.items.push(addForm)}
 
-    console.log(newArrayOfPRO);
 
     if(addForm.name&&addForm.image&&addForm.describe&&addForm.price){
+      const newArrayOfPRO={...productS,...productS.items.push(addForm)}
+
       setShow(false)
       setProductS(newArrayOfPRO)
 
