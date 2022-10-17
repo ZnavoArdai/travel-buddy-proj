@@ -133,7 +133,7 @@ if(Object.keys(formEror).length==0&&isSubmit){
 
             </Form.Group>
             <Form.Group className="mb-3" controlId="inputPhotoSignup">
-              <Form.Label>Last Name</Form.Label>
+              <Form.Label>Photo</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="put Photo"

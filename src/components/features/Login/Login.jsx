@@ -84,7 +84,7 @@ function Login() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={getInfoFromLocalStorge}>
+          <Button id="loginbtn" variant="primary" onClick={getInfoFromLocalStorge}>
             Login
           </Button>
         </Modal.Footer>
