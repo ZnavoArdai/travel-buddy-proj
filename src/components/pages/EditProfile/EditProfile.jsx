@@ -14,6 +14,10 @@ const onsubmit=()=>{
   localStorage.setItem('NEWpasswordSignup', changeProfile.password);
   localStorage.setItem('NEWlastNameSignup', changeProfile.lname);
   localStorage.setItem('NEWphotoSignup', changeProfile.photo);
+
+  if(changeProfile.fname&&changeProfile?.email&& changeProfile?.password&&changeProfile?.lname)
+  window.location.reload();
+
 }
 const handeProfileINputs=(e)=>{
   setChangeProfile({...changeProfile,[e.target.name]:e.target.value})

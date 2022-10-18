@@ -23,26 +23,43 @@ function Navbarapp({ newUser,cart }) {
       style={{ backgroundColor: "#563D7C" }}
     >
       <Container>
-        <Navbar.Brand className="acc" as={Link} to={"/"}>
-          {" "}
-          TravelBUDDY
+        <Navbar.Brand className="acc w-25 " as={Link} to={"/"}>
+          <Image className="w-25" src="images/homeImage/logo.png"/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto justify-content-center ">
-            {newUser.NEWphoto ? (
-              <Image width={50} src={newUser.NEWphoto} />
-            ) : (
-              <Image
-                width={50}
-                src="https://www.w3schools.com/w3css/img_avatar3.png"
-              />
-            )}{" "}
-            <p className="text-light ">{newUser.newName}</p>
+      
           </Nav>
 
           <Nav>
-            <Nav.Link onClick={logout}>Logout</Nav.Link>
+          <Nav.Link as={Link} to={"/profile"}  >
+
+{newUser.NEWphoto ? (
+  <div className=" ">
+
+  <div className="card-img ">
+  <Image width={59} className="img-fluid "
+     
+     src={newUser.NEWphoto}
+   />
+  </div>
+
+   </div>
+  
+) : (
+  <div className="card ">
+
+ <div className="card-img">
+ <Image width={59} className="img-fluid "
+    
+    src="https://www.w3schools.com/w3css/img_avatar3.png"
+  />
+ </div>
+
+  </div>
+)}{" "}
+</Nav.Link>
             <Nav.Link as={Link} to={"/cart"}>cart <FaCartArrowDown/> <span style={{color:"red"}}>{cart.length}</span></Nav.Link>
 
             <Nav.Link as={Link} to={"/products"}>Products</Nav.Link>
@@ -51,10 +68,10 @@ function Navbarapp({ newUser,cart }) {
               <NavDropdown.Item as={Link} to={"/profile"}>Profile</NavDropdown.Item>
               <NavDropdown.Item as={Link} to={"/about"}>About</NavDropdown.Item>
               <NavDropdown.Item as={Link} to={"/contact"}>contact</NavDropdown.Item>
-              {/* <NavDropdown.Divider /> */}
-              {/* <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item> */}
+              <NavDropdown.Divider />
+              <NavDropdown.Item  > 
+              <div  onClick={logout}>Logout</div>
+              </NavDropdown.Item> 
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

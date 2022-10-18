@@ -27,7 +27,7 @@ console.log(apiUser)
   return (
     <div className="showCase">
            <div className="  d-flex justify-content-center mt-5">
-        <div className="input-group rounded w-25 ">
+        <div className="input-group rounded w-50 ">
           <input
             type="search"
             onChange={(e) => serchInputClientes(e)}

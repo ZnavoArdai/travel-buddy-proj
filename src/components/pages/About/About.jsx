@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='showCase '>
+    <div className='showCase  '>
 <div class="card bg-dark text-white mb-5">
    <img  class="card-img " src="images/homeImage/about.jpg" alt="Example"/>
    <div class="card-img-overlay d-flex">
@@ -14,63 +14,31 @@ const About = () => {
 </div>
 <div class="text-center">
 
-  <div class="card-body mt-5 mb-5 ">
-    <h5 class="card-title">TravelBUDDY</h5>
-    <p class="card-text">
+
+<div className='d-flex justify-content-center'>
+<div className='w-50'>
+  
+  <div class="card-body mt-5 mb-5  ">
+    <h2 class="card-title">TravelBUDDY</h2>
+    <p class="card-text text-start" >
     JoinMyTrip is here to empower and connect both sides to share their travel interests, costs and unforgettable memories. We inspire travelers to live the experience of their lives and they inspire others to do the same. We invite them to join our community and they invite others to join their unique trips.
 
 We invite you to join us on our mission and come back with new friends from around the world. Join our trip!
     </p>
   </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
+</div>
 </div>
 
-<div class="row container-fluid ">
-  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
+<div className='card-img mb-5'>
+  
 
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Wintry Mountain Landscape"
-    />
-  </div>
-
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Mountains in the Clouds"
-    />
-
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
-  </div>
-
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Waves at Sea"
-    />
-
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
-    />
-  </div>
+<img className='img-fluid w-100' src="images/homeImage/team.jpg" alt="" />
 </div>
-    </div>
+
+</div>
+ 
+
+</div>
   )
 }
 

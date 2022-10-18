@@ -2,14 +2,13 @@ import React, { useContext } from 'react'
 import { usercontext } from '../../../context/Userpovider'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import EditProfile from '../../../EditProfile/EditProfile';
+import EditProfile from '../EditProfile/EditProfile';
 
 const Profile = () => {
 
   const {newUser}=useContext(usercontext)
   return (
     <div className='showCase'>
-            <h1>profile</h1>
 
     <div className=' d-flex justify-content-center m-5 text-center '>
 
