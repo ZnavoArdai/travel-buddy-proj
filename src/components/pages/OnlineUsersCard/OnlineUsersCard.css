@@ -1,5 +1,6 @@
 .OnlineUsersCard{
-    width:25rem;
+    width:20rem;
+    height: auto;
 }
 .online{
     background-color: green;

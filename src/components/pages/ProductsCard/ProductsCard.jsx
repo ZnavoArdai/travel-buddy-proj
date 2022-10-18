@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import "./ProductsCard.css"
 import Card from 'react-bootstrap/Card';
 import Cart from '../Cart/Cart';
+import { motion,AnimatePresence } from "framer-motion";
 
 function ProductsCard({items,cart,setCart}) {
 
@@ -11,7 +12,10 @@ function ProductsCard({items,cart,setCart}) {
 setCart([...cart,item])
   }
   return (
-    <div className='ProductCARD col-md-4 mt-2'>
+    <motion.div  layout animate={{scale:1,transition:{duration:2}}} initial={{scale:0,transition:{duration:2}}}   className='ProductCARD col-md-4 mt-2'>
+      <AnimatePresence>
+
+    
     <Card className='container '>
       <Card.Img variant="top" src={items.image} style={{height:"17rem"}} />
       <Card.Body>
@@ -25,7 +29,8 @@ setCart([...cart,item])
         <Button  style={{background:"#FFE484",borderBlockColor:"#563D7C",color:"black"}} onClick={()=>addToCart(items)}>Add Item</Button>
       </Card.Body>
     </Card>
-    </div>
+    </AnimatePresence>
+    </motion.div>
   );
 }
 

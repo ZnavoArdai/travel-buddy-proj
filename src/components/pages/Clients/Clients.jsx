@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import OnlineUsersCard from '../OnlineUsersCard/OnlineUsersCard';
 import {ClientsData} from "../../../service/ClientsData"
 import AddItem from "../addItem/AddItem";
+import { motion } from "framer-motion";
 const Clients = () => {
 
   const [apiUser,setApiUser]=useState([])
@@ -47,8 +48,9 @@ console.log(apiUser)
           </button>
         </div>
       </div>
+      
     <div className='ClientsItemCards mt-5 container-fluid d-flex justify-content-center mb-5'>
-<div className="row justify-content-center" id="dis"> 
+<motion.div layout  className="row justify-content-center" id="dis"> 
 
 {!apiUser.length?(
   <img src="images/loding/loadinggif.gif" alt="" />
@@ -59,7 +61,7 @@ console.log(apiUser)
   <OnlineUsersCard item={item} removeItemFromClients={removeItemFromClients} />)
 )}
 
-</div>
+</motion.div>
     </div>
    
     </div>

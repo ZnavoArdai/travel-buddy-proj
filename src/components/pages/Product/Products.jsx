@@ -4,6 +4,8 @@ import { Product } from "../../../service/productItems";
 import ProductsCard from "../ProductsCard/ProductsCard";
 import { cartContext } from "../../../context/CartContext";
 import AddItem from "../addItem/AddItem";
+import { motion } from "framer-motion";
+
 const Products = () => {
   const { cart, setCart } = useContext(cartContext);
   const [search, setSearch] = useState("");
@@ -49,10 +51,10 @@ setProductS({...productS,items})
 </div>
 
 
-     <div className="float-end sticky-top">
+     <motion.div animate={{y:150 ,transition:{duration:3 }}} className="float-end sticky-top">
      <AddItem productS={productS}  setProductS={setProductS}/>
 
-     </div>
+     </motion.div>
       <div className="  d-flex justify-content-center mt-5">
         <div className="input-group rounded w-50 ">
           <input
@@ -75,7 +77,7 @@ setProductS({...productS,items})
         </div>
       </div>
       <div className="productsItemCards mt-5 container-fluid d-flex justify-content-center ">
-        <div className="row justify-content-center">
+        <motion.div layout animate={{opacity:1}} initial={{opacity:0}} exit={{opacity:0}} className="row justify-content-center">
           {productS.items
             .filter((items) =>
               items.name.toLowerCase().includes(search.toLowerCase())
@@ -83,7 +85,7 @@ setProductS({...productS,items})
             .map((items) => (
               <ProductsCard items={items} cart={cart} setCart={setCart} />
             ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

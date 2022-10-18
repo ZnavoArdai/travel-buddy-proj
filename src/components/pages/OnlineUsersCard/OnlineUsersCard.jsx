@@ -3,6 +3,8 @@ import Card from 'react-bootstrap/Card';
 import "./OnlineUsersCard.css"
 import { FaCircle } from 'react-icons/fa';
 import { FaRegWindowClose } from 'react-icons/fa';
+import { motion } from "framer-motion";
+
 
 
 
@@ -10,10 +12,10 @@ function OnlineUsersCard({item,removeItemFromClients}) {
 
 
   return (
-    <div className='OnlineUsersCard col-sm-4 mt-3 '>
+    <motion.div layout animate={{scale:1,transition:{duration:2}}} initial={{scale:0,transition:{duration:2}}} className='OnlineUsersCard col-sm-4 mt-3 '>
 
     <Card className='container  '>
-      <Card.Img  variant="top"   style={{height:"17rem"}} src={item.image} />
+      <Card.Img   variant="top"    src={item.image} />
       <Card.Body>
         <Card.Title>{item.name} <FaCircle className='text-success'/></Card.Title>
         <Card.Text>
@@ -29,7 +31,7 @@ function OnlineUsersCard({item,removeItemFromClients}) {
    
       </Card.Body>
     </Card>
-    </div>
+    </motion.div>
   );
 }
 
