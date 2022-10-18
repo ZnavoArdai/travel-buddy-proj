@@ -36,7 +36,6 @@ describe('empty spec', () => {
   it("check items component",()=>{
     cy.get(':nth-child(1) > .container > .card-body > :nth-child(2)').should("have.css", { color: "#000000" });
     cy.get('.row > :nth-child(1) > .container').should("exist");
-    cy.get(':nth-child(8) > .container > .card-body > .btn').click()
     // cy.get('.form-control').type("backpack")
   })
 

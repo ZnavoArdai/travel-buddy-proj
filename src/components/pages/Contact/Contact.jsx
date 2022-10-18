@@ -17,14 +17,14 @@ const Contact = () => {
   };
 
   const onSubmitFormContact=(e)=>{
-    e.preventDefault()
+
     setContactEror(validateConatctForm(contactForm))
     setIsSubmitContact(true)
+if(!contactEror.name&&!contactEror.email&&!contactEror.message){
+  e.preventDefault()
 
-if(Object.keys(contactEror).length==0&&isSubmitContact){
-
-  alert("you good")
 }
+
     console.log(contactForm);
   }
 
@@ -53,11 +53,14 @@ if(Object.keys(contactEror).length==0&&isSubmitContact){
 
   return (
     <div className="showCase d-flex justify-content-center">
-      <div
-        className="mt-5 bg-opacity-50 mb-5 text-light "
-        style={{ backgroundColor: "#563D7C" }}
-      >
-        <Form>
+      <div className="form row container mt-5 mb-5">
+
+
+      <div className="col-6 d-none d-md-block ">
+        <img className="img-fluid " src="images/homeImage/form.jpg" alt="" />
+      </div>
+      <div className="mt-5 bg-opacity-50 mb-5 col-md-6 ">
+        <Form action="https://formspree.io/f/xlevwdao" method="POST">
           <h3>Contact us</h3>
           <Form.Group className="mb-3" controlId="namee">
             <Form.Label>Full Name</Form.Label>
@@ -88,6 +91,7 @@ if(Object.keys(contactEror).length==0&&isSubmitContact){
             Submit
           </Button>
         </Form>
+      </div>
       </div>
     </div>
   );
