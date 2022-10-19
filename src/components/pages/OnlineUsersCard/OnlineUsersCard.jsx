@@ -4,6 +4,7 @@ import "./OnlineUsersCard.css"
 import { FaCircle } from 'react-icons/fa';
 import { FaRegWindowClose } from 'react-icons/fa';
 import { motion } from "framer-motion";
+import SendMessages from '../sendMessages/SendMessages';
 
 
 
@@ -24,7 +25,7 @@ function OnlineUsersCard({item,removeItemFromClients}) {
         <Card.Text>
         </Card.Text>
         <div className='d-flex justify-content-between'>
-        <Button  style={{background:"#FFE484",borderBlockColor:"#563D7C",color:"black"}}>send massage</Button>
+          <SendMessages item={item}/>
         <Button  onClick={()=>removeItemFromClients(item.id)} style={{background:"#FFE484",borderBlockColor:"#563D7C",color:"black"}}><FaRegWindowClose/></Button>
 
         </div>
