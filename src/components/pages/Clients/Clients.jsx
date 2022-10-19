@@ -13,8 +13,8 @@ const Clients = () => {
   setTimeout(()=>{
     setApiUser(ClientsData.items)
   },3000)
+
   },[])
-console.log(apiUser)
   const serchInputClientes=(e)=>{
     setSearchClients(e.target.value)
   }

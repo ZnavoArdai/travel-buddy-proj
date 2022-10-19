@@ -7,3 +7,19 @@
     width:0.5rem;
     border-radius: 50%;
 }
+
+
+
+.imgOverflow{
+    overflow: hidden;
+}
+.cardsimg{
+    transform: scale(1)
+
+}
+
+.cardsimg:hover{
+    transform: scale(1.5);
+    transition: transform 0.5s ease-in
+
+}
