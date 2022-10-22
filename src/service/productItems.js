@@ -1,11 +1,10 @@
 
-import one from "../../public/images/products/1"
 export const Product={
 items:[
     {
         id:'1',
         name:"Travel Backpack",
-        image:{one},
+        image:"/images/products/1.jpg",
         describe:"JefDiee Inflatable Travel Pillow, Airplane Neck Pillow Comfortably Supports Head and Chin for Airplanes, Trains, Cars and",
         price:13,
         amount:1,
