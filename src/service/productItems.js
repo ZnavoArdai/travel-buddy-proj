@@ -4,7 +4,7 @@ items:[
     {
         id:'1',
         name:"Travel Backpack",
-        image:"/images/products/1.jpg",
+        image:"file:///C:/projects2022/react/travel-buddy-proj/public/images/products/1.jpg",
         describe:"JefDiee Inflatable Travel Pillow, Airplane Neck Pillow Comfortably Supports Head and Chin for Airplanes, Trains, Cars and",
         price:13,
         amount:1,
