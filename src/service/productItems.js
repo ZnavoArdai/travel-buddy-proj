@@ -4,7 +4,7 @@ items:[
     {
         id:'1',
         name:"Travel Backpack",
-        image:"/images/products/1.jpg",
+        image:"../../../../images/products/1.jpg",
         describe:"JefDiee Inflatable Travel Pillow, Airplane Neck Pillow Comfortably Supports Head and Chin for Airplanes, Trains, Cars and",
         price:13,
         amount:1,
@@ -15,7 +15,7 @@ items:[
         id:'2',
         name:"Airplane Footrest ",
 
-        image:"/images/products/2.jpg",
+        image:"./images/products/2.jpg",
         describe:"Airplane Footrest - Portable Travel Accessories to Relax Your Feet, Under Desk Footrest Adjustable Height",
         price:40,
         amount:1,
