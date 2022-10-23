@@ -53,7 +53,7 @@ const Clients = () => {
 <motion.div layout  className="row justify-content-center" id="dis"> 
 
 {!apiUser.length?(
-  <img src="images/loding/loadinggif.gif" alt="" />
+  <img src="https://cdn.dribbble.com/users/2973561/screenshots/5757826/loading__.gif" alt="" />
 ):(
 
   apiUser.filter((items)=>items.name.toLowerCase().includes(searchClients.toLowerCase())).map((item)=>

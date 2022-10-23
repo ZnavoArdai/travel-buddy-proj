@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className='showCase  '>
 <div class="card bg-dark text-white mb-5">
-   <img  class="card-img " src="images/homeImage/about.jpg" alt="Example"/>
+   <img  class="card-img " src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Example"/>
    <div class="card-img-overlay d-flex">
      <div class="abouttitile align-self-center mx-auto"  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
       <h1 className=''>About us</h1>
@@ -32,7 +32,7 @@ We invite you to join us on our mission and come back with new friends from arou
 <div className='card-img mb-5'>
   
 
-<img className='img-fluid w-100' src="images/homeImage/team.jpg" alt="" />
+<img className='img-fluid w-100' src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_152414899_97046097045006_68075.jpg" alt="" />
 </div>
 
 </div>

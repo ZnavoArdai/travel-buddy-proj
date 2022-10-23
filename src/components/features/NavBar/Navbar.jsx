@@ -24,7 +24,7 @@ function Navbarapp({ newUser,cart }) {
     >
       <Container>
         <Navbar.Brand className="acc w-25 " as={Link} to={"/"}>
-          <Image className="w-25" src="images/homeImage/logo.png"/>
+          <Image className="w-25" src="https://en.pimg.jp/073/973/465/1/73973465.jpg"/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
